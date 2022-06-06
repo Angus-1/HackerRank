@@ -18,9 +18,9 @@ def plusMinus(arr):
         else:
             zero += 1
         
-    print(f'{posit/len(arr):.6f}')
-    print(f'{negat/len(arr):.6f}')
-    print(f'{zeros/len(arr):.6f}')
+    print(f'{pos/len(arr):.6f}')
+    print(f'{neg/len(arr):.6f}')
+    print(f'{zero/len(arr):.6f}')
       
 if __name__ == '__main__':
     n = int(input().strip())
