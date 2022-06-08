@@ -6,6 +6,10 @@ import random
 import re
 import sys
 
+#There is a collection of input strings and a collection of query strings. 
+#For each query string, determine how many times it occurs in the list of input strings. 
+#Return an array of the results.
+
 def matchingStrings(strings, queries):
     return [strings.count(i) for i in queries]
     #.count method returns number each time element occurs in queries list 
