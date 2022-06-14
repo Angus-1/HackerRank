@@ -6,7 +6,23 @@ import random
 import re
 import sys
 
-    
+#==========================================================
+#Given the sequence of up and down steps during a hike, find and print the number of valleys walked through.
+# Sample Input
+#8
+#UDDDUDUU
+
+#Sample Output
+#1
+
+#Explanation
+#If we represent _ as sea level, a step up as /, and a step down as \, the hike can be drawn as:
+
+#_/\      _
+#   \    /
+#    \/\/   
+#==========================================================
+
 def countingValleys(steps, path):
     count = 0
     altitude = 0
