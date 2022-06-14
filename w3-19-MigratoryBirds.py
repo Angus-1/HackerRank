@@ -20,7 +20,7 @@ def migratoryBirds(arr):
     for b in birds:                 #iterate by unique bird IDs
         if arr.count(b) > most:     #compare count of current bird to most occured bird 
             most = arr.count(b)     #update count of most occured bird 
-            maxID = b               #max id is equal to current b element
+            maxID = b               #max id is updated to current b element
     return maxID                    #return maxID bird which also stopped at most occured bird
     
     
