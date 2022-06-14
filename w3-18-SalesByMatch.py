@@ -6,6 +6,11 @@ import random
 import re
 import sys
 
+
+#There is a large pile of socks that must be paired by color.
+#Given an array of integers representing the color of each sock,
+#determine how many pairs of socks with matching colors there are
+
 #current array   ( 1 1 1 2 2 2 3 3 )
 #current colors  (1, 2, 3)
 def sockMerchant(n, ar):
