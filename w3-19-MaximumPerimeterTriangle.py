@@ -25,17 +25,6 @@ def maximumPerimeterTriangle(s):
     return (b)                  #no triangle exist condition
  
 
-def maximumPerimeterTriangle(sticks):
-    arr = sorted(sticks)
-    res = [-1]
-    for i in range(len(arr)-2):
-        cut = arr[i:i+3]
-        if cut[0] + cut[1] > cut[2]:
-            res = cut
-    return res
-    
-    
-
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
