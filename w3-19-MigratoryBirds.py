@@ -6,21 +6,21 @@ import random
 import re
 import sys
 
-# Given an array of bird sightings where every element represents a bird type id,
-# determine the id of the most frequently sighted type. 
-
-# If more than 1 type has been spotted that maximum amount, return the #smallest of their ids.
-
+#Given an array of bird sightings where every element represents a bird type id, determine the id of the #most frequently sighted type. If more than 1 type has been spotted that maximum amount, return the #smallest of their ids.
 def migratoryBirds(arr):
    
     birds = set(arr)  #set of unique bird ids
     most = 0         #most occured bird
     maxID = 0        #maxid key we assign to bird element we are at
     
-    for b in birds:                 #iterate by unique bird IDs
-        if arr.count(b) > most:     #compare count of current bird to most occured bird 
-            most = arr.count(b)     #update count of most occured bird 
-            maxID = b               #max id is updated to current b element
+    for b in birds:                 #iterate by  unique bird IDs
+                         
+        if arr.count(b) > most:     #compare count of new bird to previous most occured bird 
+            most = arr.count(b)     #if greater update count of most occured bird 
+            maxID = b               #max id is updated to current birdID/element 
+            
+        else: continue              #otherwise continue to next birdID and repeat
+        
     return maxID                    #return maxID bird which also stopped at most occured bird
     
     
