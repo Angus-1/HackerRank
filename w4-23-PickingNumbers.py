@@ -5,8 +5,9 @@ import os
 import random
 import re
 import sys
+from collections import defaultdict
 
-
+#solution 1 (does not pass all cases misses 2)
 def pickingNumbers(arr):
     nums = set(arr)
     most = 0  
@@ -20,7 +21,19 @@ def pickingNumbers(arr):
         else: continue              
         
     return most + mostAfter    
+
+#solution 2 using dict, passes all test cases   
+def pickingNumbers(a):
+    a.sort()
+    nums = defaultdict(int)
+    maxSub = 0
+    for i in a:
+        nums[i] += 1
+    for i in range(1,100):
+        maxSub = max(maxSub,nums[i] + nums[i+1])   
+    return maxSub    
     
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
