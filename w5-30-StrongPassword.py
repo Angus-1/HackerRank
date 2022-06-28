@@ -14,25 +14,16 @@ import sys
 #It contains at least one special character. The special characters are: !@#$%^&*()-+
 #returns min number of chars to make password strong
 
-def minimumNumber(n, pw):
-    numbers = "0123456789"
-    lower_case = "abcdefghijklmnopqrstuvwxyz"
-    upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    special_characters = "!@#$%^&*()-+"
-    cnt=0 #increment count if any condition not met
+def minimumNumber(x, password):
+    minx = 6
+    count = 0
+    if not re.search('[0-9]', password): count += 1
+    if not re.search('[A-Z]', password): count += 1
+    if not re.search('[a-z]', password): count += 1 
+    if not re.search(r'[!@#$%^&*()\-+]', password): count += 1
     
-    if len(pw)<6:
-        cnt=6-len(pw)
-    if pw.count(upper_case)==0:
-        if cnt<1:
-            cnt+=1
-    if pw.count(lower_case)==0:
-        if cnt<1:
-            cnt+=1
-    if pw.count(special_characters)==0:
-        if cnt<1:
-            cnt+=1
-    return cnt
+    return max(minx - len(password), count) if n < 6 else count
+
 
     
 if __name__ == '__main__':
